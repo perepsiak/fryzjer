@@ -1,0 +1,28 @@
+body {
+    font-family: Garamond;
+    text-align: center;
+}
+
+header a {
+    color: white;
+}
+
+.right {
+    background-color: #BCAAA4;
+    color: #795548;
+    height: 400px;
+    width: 28%;
+}
+
+.left {
+    background-color: #795548;
+    font-size: 170%;
+}
+
+footer {
+    background-color: #795548;
+}
+
+footer a {
+    color: white;
+}
