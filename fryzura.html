@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<html lang="pl">
+<meta name="viewport" content="">
+<meta charset="utf-8">
+<title>Fryzjerstwo</title>
+</head>
+<body>
+    <div class="box">
+        <div class="col-9">
+            <h2>PROMOCJA!</h2>
+            <form>
+                <div>
+                    <input id="krotkie" type="radio" name="dlugosc" value="25" checked />
+                    <label for="krotkie">Krótkie</label>
+                </div>
+                <div>
+                    <input id="srednie" type="radio" name="dlugosc" value="30" />
+                    <label for="srednie">Średnie</label>
+                </div>
+                <div>
+                    <input id="poldlugie" type="radio" name="dlugosc" value="40" />
+                    <label for="poldlugie">Półdługie</label>
+                </div>
+                <div>
+                    <input id="dlugie" type="radio" name="dlugosc" value="50" />
+                    <label for="dlugie">Długie</label>
+                </div>
+                <button type="submit" oneclick="obliczPromocje()">Odkryj promocje</button>
+                <p>Cena promocyjna <span id="cena-promocyjna">0</span></p>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function obliczPromocje() {
+    let krotkie = document.getElementById("krotkie")
+    let srednie = document.getElementById("srednie")
+    let poldlugie = document.getElementById("poldlugie")
+    let dlugie = document.getElementById("dlugie")
+    console.log(krotkie.value)
+    console.log(srednie.value)
+    console.log(poldlugie.value)
+    console.log(dlugie.value)
+
+    console.log(krotkie.checked)
+
+    if (krotkie.checked) {
+        document.getElementById("cena-promocyjna").innerHTML = krotkie.value - 10;
+        console.log('hura krotkie', krotkie.value - 10)
+
+    } else if (srednie.checked) {
+        document.getElementById("cena-promocyjna").innerHTML = srednie.value - 10;
+        console.log('hura srednie', krotkie.value - 10)
+
+    } else if (poldlugie.checked) {
+        document.getElementById("cena-promocyjna").innerHTML = poldlugie.value - 10;
+        console.log('hura poldlugie', krotkie.value - 10)
+
+    } else if (dlugie.checked) {
+        document.getElementById("cena-promocyjna").innerHTML = dlugie.value - 10;
+        console.log('hura dlugie', krotkie.value - 10)
+        
+    };
+    }
+</script>
+</html>
